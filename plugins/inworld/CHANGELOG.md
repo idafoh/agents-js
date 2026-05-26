@@ -1,5 +1,12 @@
 # @livekit/agents-plugin-inworld
 
+## 1.4.5
+
+### Patch Changes
+
+- Updated dependencies [[`703cffbfda8a8b830b78f2c89e0b2284244dc120`](https://github.com/livekit/agents-js/commit/703cffbfda8a8b830b78f2c89e0b2284244dc120), [`22b24ae18ca4f3dd690a948e9f9ab3ac9cdad4b0`](https://github.com/livekit/agents-js/commit/22b24ae18ca4f3dd690a948e9f9ab3ac9cdad4b0), [`4207d54c037ad0206814ae5e246735e357bb4c3b`](https://github.com/livekit/agents-js/commit/4207d54c037ad0206814ae5e246735e357bb4c3b), [`7479bd4640d2d82a4f0263dc0745e72bab733127`](https://github.com/livekit/agents-js/commit/7479bd4640d2d82a4f0263dc0745e72bab733127), [`181c868d75fe8828e5193fc530f454d52fc776e0`](https://github.com/livekit/agents-js/commit/181c868d75fe8828e5193fc530f454d52fc776e0), [`0f29f6bd34559ba98544c2c9621936b44a0573b8`](https://github.com/livekit/agents-js/commit/0f29f6bd34559ba98544c2c9621936b44a0573b8), [`c5eaadd27748aa2a69a4cb1a72b3de652fa841ef`](https://github.com/livekit/agents-js/commit/c5eaadd27748aa2a69a4cb1a72b3de652fa841ef), [`154189e4af2149c580aeaba7dfe3a8c79f3d682d`](https://github.com/livekit/agents-js/commit/154189e4af2149c580aeaba7dfe3a8c79f3d682d), [`ee078ec394e697a989bd0faf53aa043392fa7ae4`](https://github.com/livekit/agents-js/commit/ee078ec394e697a989bd0faf53aa043392fa7ae4), [`ee078ec394e697a989bd0faf53aa043392fa7ae4`](https://github.com/livekit/agents-js/commit/ee078ec394e697a989bd0faf53aa043392fa7ae4)]:
+  - @livekit/agents@1.4.5
+
 ## 1.4.4
 
 ### Patch Changes

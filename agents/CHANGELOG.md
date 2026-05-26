@@ -1,5 +1,33 @@
 # @livekit/agents
 
+## 1.4.5
+
+### Patch Changes
+
+- fix: repair leaked chat-template tokens in function call args - [#1604](https://github.com/livekit/agents-js/pull/1604) ([@rosetta-livekit-bot](https://github.com/apps/rosetta-livekit-bot))
+
+- Fix interrupt race that could leak unplayed transcript text. - [#1573](https://github.com/livekit/agents-js/pull/1573) ([@rosetta-livekit-bot](https://github.com/apps/rosetta-livekit-bot))
+
+- chore(worker): update worker warnings - [#1571](https://github.com/livekit/agents-js/pull/1571) ([@rosetta-livekit-bot](https://github.com/apps/rosetta-livekit-bot))
+
+- fix(llm): convert per-turn instructions on the first turn for Google provider format - [#1589](https://github.com/livekit/agents-js/pull/1589) ([@rosetta-livekit-bot](https://github.com/apps/rosetta-livekit-bot))
+
+- feat(realtime): support multi-message generation per response - [#1555](https://github.com/livekit/agents-js/pull/1555) ([@rosetta-livekit-bot](https://github.com/apps/rosetta-livekit-bot))
+
+- fix(voice): make ParticipantAudioOutput.pause() actually gate audio (port \_playback_enabled + synchronizer pause) - [#1579](https://github.com/livekit/agents-js/pull/1579) ([@toubatbrian](https://github.com/toubatbrian))
+
+- Replace discarded input audio with silence for STT and realtime model streams. - [#1601](https://github.com/livekit/agents-js/pull/1601) ([@rosetta-livekit-bot](https://github.com/apps/rosetta-livekit-bot))
+
+- fix: make non-transient 4xx API status errors non-retryable - [#1597](https://github.com/livekit/agents-js/pull/1597) ([@rosetta-livekit-bot](https://github.com/apps/rosetta-livekit-bot))
+
+- feat(google): add Vertex AI Model Garden LLM integration - [#1606](https://github.com/livekit/agents-js/pull/1606) ([@rosetta-livekit-bot](https://github.com/apps/rosetta-livekit-bot))
+
+- fix(voice): surface tool-argument validation errors to the LLM instead of returning a generic "internal error" - [#1606](https://github.com/livekit/agents-js/pull/1606) ([@rosetta-livekit-bot](https://github.com/apps/rosetta-livekit-bot))
+
+  When an LLM-generated tool call failed JSON parsing or Zod schema validation, the framework returned `"An internal error occurred"` to the LLM, which left the model with no way to correct itself — causing it to loop on the same invalid call. Argument-validation failures are now wrapped in a `ToolError` whose message includes the tool name and the validator's diagnostic, so the LLM can fix its arguments.
+
+  Behavior is unchanged for exceptions thrown from inside a tool's `execute`: regular `Error`s are still masked as `"An internal error occurred"` to avoid leaking server-side details, and `ToolError` continues to be the supported way to forward a custom message to the LLM.
+
 ## 1.4.4
 
 ### Patch Changes
